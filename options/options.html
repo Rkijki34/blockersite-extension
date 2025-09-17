@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Settings — Password Site Blocker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="opt-container">
+      <h1>Settings</h1>
+
+      <section class="opt-section">
+        <label class="opt-label" for="masterPassword">Master password</label>
+        <input id="masterPassword" class="opt-input" type="password" placeholder="Enter new master password (leave blank to keep current)" autocomplete="new-password" />
+        <p id="passwordStatus" class="opt-help"></p>
+      </section>
+
+      <section class="opt-section">
+        <label class="opt-label" for="blockedStorageSelect">Storage location for blocked list</label>
+        <select id="blockedStorageSelect" class="opt-input">
+          <option value="sync">Sync (across signed-in browsers)</option>
+          <option value="local">Local (this device only)</option>
+        </select>
+        <p class="opt-help">
+          Choose where to store your blocked sites list. For more privacy, use Local.
+          The master password hash is always stored locally (never synced).
+        </p>
+      </section>
+
+      <section class="opt-section">
+        <label class="opt-label" for="blockedSites">Blocked sites list</label>
+        <textarea id="blockedSites" class="opt-textarea" rows="10" placeholder="Examples:
+facebook.com
+*.instagram.com
+https://www.youtube.com/
+twitter.com/explore"></textarea>
+        <p class="opt-help">
+          One entry per line. Supports:
+          - Domains (e.g., facebook.com),
+          - Wildcards (e.g., *.site.com),
+          - Full URLs (e.g., https://site.com/page),
+          - With path (e.g., site.com/path).
+        </p>
+      </section>
+
+      <div class="opt-actions">
+        <button id="saveBtn" class="opt-btn">Save settings</button>
+        <span id="status" class="opt-status" role="status" aria-live="polite"></span>
+      </div>
+
+      <section class="opt-section">
+        <h2 style="margin-top:0;font-size:18px;">Import / Export</h2>
+        <div class="opt-actions" style="gap:8px;flex-wrap:wrap;">
+          <button id="exportBtn" class="opt-btn">Export settings (JSON)</button>
+          <button id="importBtn" class="opt-btn">Import settings (JSON)</button>
+          <input id="importFile" type="file" accept="application/json" style="display:none" />
+        </div>
+        <p class="opt-help">
+          Export creates a JSON file containing your blocked list, the chosen storage location,
+          and the master password <em>hash</em> (never plaintext).
+        </p>
+      </section>
+
+      <footer class="opt-footer">
+        <small>Note: On some special pages (e.g., chrome://, addons.mozilla.org), extensions cannot inject content.</small>
+      </footer>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
