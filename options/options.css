@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light dark;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+.opt-container {
+  max-width: 880px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 16px 0;
+}
+
+.opt-section {
+  background: #0f172a; /* slate-900 */
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.opt-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.opt-help {
+  margin: 8px 0 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.opt-input, .opt-textarea, select.opt-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #111827;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.opt-input:focus, .opt-textarea:focus, select.opt-input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+.opt-textarea {
+  min-height: 200px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.opt-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 24px;
+}
+
+.opt-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(180deg, #1f2937, #111827);
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.02s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.opt-btn:hover {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.opt-btn:active {
+  transform: translateY(1px);
+}
+
+.opt-status {
+  min-height: 20px;
+  font-size: 14px;
+}
+
+.opt-footer {
+  color: #94a3b8;
+  text-align: center;
+}
