@@ -113,4 +113,5 @@ Notes:
 ## Images
 ![extension](https://github.com/user-attachments/assets/bfe78321-0780-49cd-a115-89b119319336)
 
-
+### A blocked site
+![extensionv2](https://github.com/user-attachments/assets/fc3bd290-2991-4a3a-9411-aa1741be6246)
